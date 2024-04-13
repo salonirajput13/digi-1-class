@@ -6,7 +6,7 @@ const cors = require('cors');
 const userRouter = require('./Routers/User')
 
 app.use(cors({
-    origin:['http://localhost:5174']
+    origin:['http://localhost:5173']
 }))
 
 //middlewear

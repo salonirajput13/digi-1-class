@@ -18,7 +18,21 @@ router.post('/add', (req,res) => {
     .then((reset)=> {
         if (result) res.json(result);
         else res.status(400).json({message: 'login failed'}); 
-    }).catch((err))
+    }).catch((err)=>{
+        console.log(err);
+        res.status(200).json (err)
+    });
 })
+
+router.post('/getall',(req,res) => {
+    Model.find({})
+    .then((reset)=> {
+        res.json(result); 
+    }).catch((err)=>{
+        console.log(err);
+        res.status(200).json (err)
+    });
+})
+
 
 module.exports = router;
